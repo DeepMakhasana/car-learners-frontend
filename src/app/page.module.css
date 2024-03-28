@@ -1,0 +1,285 @@
+.searchWrapper {
+    display: flex;
+    width: 100%;
+    background-color: var(--white-background);
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-size);
+    margin-bottom: 1rem;
+}
+
+.searchWrapper input {
+    width: 90%;
+    background-color: var(--white-background);
+    border: none;
+    padding: 0.85rem 1rem;
+    border: 1px solid #ccc;
+    transition: 0.5s;
+    outline: none;
+    border-right: none;
+    border-radius: var(--radius-size);
+    border-top-right-radius: 0px;
+    border-end-end-radius: 0px;
+}
+
+.searchWrapper input:focus {
+    border: 1px solid var(--light-text);
+}
+
+.searchWrapper .search__Icon {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.85rem 0;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: var(--radius-size);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+}
+
+/* slide design */
+.offerSlider {
+    height: 250px;
+}
+
+.slideWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.slideInfoWrapper {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.slide__img {
+    width: 40%;
+}
+
+.slide__info h2 {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+}
+
+.slide__info p {
+    color: var(--mid-light-text);
+    font-size: 1rem;
+}
+
+.slide__info span {
+    color: var(--light-text);
+    font-size: 0.85rem;
+}
+
+.slide__info a {
+    background-color: var(--primary-color);
+    padding: 0.55rem 1rem;
+    border-radius: var(--large-radius-size);
+    width: fit-content;
+    color: var(--white-text);
+}
+
+/* sort design */
+.filterWrapper {
+    display: flex;
+    gap: 1.2rem;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.filterWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.filterWrapper .filterBy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    min-width: 104px;
+}
+
+.filterWrapper .filterBy>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterWrapper>div {
+    background-color: var(--white-background);
+    padding: 0.4rem 0.95rem;
+    border: 1px solid var(--light-border-color);
+    border-radius: var(--radius-size);
+    width: fit-content;
+    font-size: 0.85rem;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.filterWrapper .filterActive {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* filter option */
+.filterOptionWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.filterOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background-color: var(--white-background);
+    padding: 1rem;
+    border-radius: var(--radius-size);
+}
+
+/* school section design */
+.schoolWrapper {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self: center;
+    gap: 1rem;
+}
+
+.schoolCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--white-background);
+    padding: 1rem;
+    border-radius: var(--radius-size);
+    min-width: 300px;
+}
+
+.schoolCard__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.schoolCard__info h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.schoolCard__info .schoolCard__highlights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.schoolCard__info .schoolCard__highlights p:nth-child(2) {
+    order: 3;
+}
+
+.schoolCard__info .schoolCard__highlights p:nth-child(3) {
+    order: 2;
+}
+
+.schoolCard__highlights p {
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.schoolCard__address p {
+    color: var(--light-text);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+@media (min-width: 921px) and (max-width: 1200px) {
+
+    /* school section design */
+    .schoolWrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .searchWrapper input {
+        width: 85%;
+    }
+
+    .searchWrapper .search__Icon {
+        width: 15%;
+    }
+
+    .offerSlider {
+        height: 180px;
+    }
+
+    .slide__info h2 {
+        font-size: 1.4rem;
+    }
+
+    .slide__info p {
+        font-size: 0.8rem;
+    }
+
+    .slide__info span {
+        font-size: 0.65rem;
+    }
+
+    .slide__info a {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    .filterWrapper {
+        gap: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+
+    /* school section design */
+    .schoolWrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+    }
+
+    .schoolCard {
+        padding: 0.5rem;
+    }
+
+    .schoolCard__address p {
+        font-size: 0.65rem;
+    }
+}

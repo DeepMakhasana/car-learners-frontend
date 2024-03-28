@@ -13,14 +13,23 @@ export interface IAuthState {
   userData: UserData;
 }
 
+let storedData;
+
+if (typeof window !== "undefined") {
+  storedData = localStorage.getItem("auth_token");
+}
+
 const initialState: IAuthState = {
   authState: false,
-  userData: {
-    id: 0,
-    email: "",
-    name: "",
-    photo: "",
-  },
+  userData:
+    storedData == null
+      ? {
+          id: 0,
+          email: "",
+          name: "",
+          photo: "",
+        }
+      : JSON.parse(storedData),
 };
 
 const authSlice = createSlice({
@@ -30,6 +39,7 @@ const authSlice = createSlice({
     setAuthState: (state, action: PayloadAction<UserData>) => {
       state.authState = true;
       state.userData = action.payload;
+      localStorage.setItem("auth_token", JSON.stringify(action.payload));
     },
 
     removeAuthState: (state, action) => {

@@ -4,7 +4,7 @@ import React from "react";
 
 const User = () => {
   const { authState, userData } = useAppSelector((state) => state.auth);
-  console.log("User: ", authState, userData);
+
   return (
     <div>
       <h2>Login User Detail:</h2>

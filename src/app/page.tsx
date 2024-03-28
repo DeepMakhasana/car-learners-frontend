@@ -1,14 +1,21 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Link from "next/link";
+import Filter from "./components/Filter";
+import SchoolWrapper from "./components/SchoolWrapper";
+import Search from "./components/Search";
+import Slider from "./components/Slider";
+import Topbar from "@/components/navbar/Topbar";
 
 export default function Home() {
   return (
-    <section>
-      <h1>Home Page</h1>
-      <Link href={"/school"}>School</Link>
-      <br />
-      <Link href={"/user"}>User</Link>
-    </section>
+    <>
+      <Topbar />
+      <section>
+        <main>
+          <Search />
+          <Slider />
+          <Filter />
+          <SchoolWrapper />
+        </main>
+      </section>
+    </>
   );
 }

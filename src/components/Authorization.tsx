@@ -2,7 +2,7 @@
 import { jwtDecode } from "jwt-decode";
 import { redirect } from "next/navigation";
 import React from "react";
-import { useAppDispatch } from "@/redux/store";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setAuthState } from "@/redux/slice/authSlice";
 
 type EmailType = {
@@ -18,29 +18,33 @@ export type UserData = {
 };
 
 const Authorization = ({ children, jwtToken }: { children: React.ReactNode; jwtToken: string | undefined }) => {
+  const { authState } = useAppSelector((state) => state.auth);
   const dispatch = useAppDispatch();
 
   console.log("Auth", jwtToken);
 
-  if (jwtToken) {
-    const decoded: UserData = jwtDecode(jwtToken);
-    const {
-      id,
-      name,
-      email: { value },
-      photo,
-    } = decoded;
-    const userData = {
-      id,
-      name,
-      email: value,
-      photo,
-    };
-    // TODO user data store in redux store
-    dispatch(setAuthState(userData));
-  } else {
-    redirect("/");
+  if (!authState) {
+    if (jwtToken) {
+      const decoded: UserData = jwtDecode(jwtToken);
+      const {
+        id,
+        name,
+        email: { value },
+        photo,
+      } = decoded;
+      const userData = {
+        id,
+        name,
+        email: value,
+        photo,
+      };
+      // TODO user data store in redux store
+      dispatch(setAuthState(userData));
+    } else {
+      redirect("/");
+    }
   }
+
   return <>{children}</>;
 };
 
