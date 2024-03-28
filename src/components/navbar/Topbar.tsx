@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <nav className={styles.topbarWrapper}>
       <div>
-        <Link href={"/"}>
+        <Link href={"/location"}>
           <p>Location</p>
         </Link>
       </div>

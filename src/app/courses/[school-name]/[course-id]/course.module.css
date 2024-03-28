@@ -24,9 +24,15 @@
 
 .courseDetailWrapper .courseAddress {
     display: flex;
-    align-items: center;
-    gap: 0.8rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
     margin-top: 1rem;
+}
+
+.courseDetailWrapper .courseAddress img {
+    width: 16px;
+    height: 16px;
 }
 
 .courseDetailWrapper .courseAddress p {
@@ -38,13 +44,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--white-background);
+    background-color: var(--primary-color);
     position: fixed;
-    bottom: 1px;
+    bottom: 0;
     right: 0;
     padding: 0.6rem 0;
     border: none;
-    color: var(--primary-color);
+    color: var(--white-text);
     font-size: 1.2rem;
     font-weight: 600;
     border-top: 1px solid var(--primary-color);
@@ -89,7 +95,8 @@
 }
 
 .relatedSchoolsWrapper {
-    margin: 1.0rem 0;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
     display: flex;
     gap: 1rem;
     overflow-x: scroll;

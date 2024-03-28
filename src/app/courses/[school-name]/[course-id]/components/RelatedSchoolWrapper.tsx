@@ -110,7 +110,7 @@ const RelatedSchoolWrapper = () => {
       <h2>Related Schools</h2>
       <div className={styles.relatedSchoolsWrapper}>
         {cards.map((school) => (
-          <SchoolCard key={school.schoolName} card={school} />
+          <SchoolCard key={school.schoolName} card={school} min_width="180px" />
         ))}
       </div>
     </div>

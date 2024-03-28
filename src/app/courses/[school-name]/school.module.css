@@ -45,8 +45,14 @@
 .schoolDetailWrapper .schoolDetail__address {
     display: flex;
     gap: 0.5rem;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
     width: 40%;
+}
+
+.schoolDetailWrapper .schoolDetail__address img {
+    width: 16px;
+    height: 16px;
 }
 
 .SchoolCourseWrapper {
@@ -54,6 +60,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 0.8rem;
     margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 .courseWrapper {
@@ -123,4 +130,24 @@
 
 .ratingWrapper>p {
     max-width: 600px;
+}
+
+@media only screen and (max-width: 768px) {
+    .schoolDetailWrapper {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .schoolDetailWrapper h1 {
+        width: 100%;
+    }
+
+    .schoolDetailWrapper .schoolDetail__address {
+        width: 100%;
+    }
+
+
+    .SchoolCourseWrapper {
+        grid-template-columns: 1fr;
+    }
 }

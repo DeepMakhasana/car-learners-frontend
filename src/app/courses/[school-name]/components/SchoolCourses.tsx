@@ -36,10 +36,13 @@ const courses: CourseType[] = [
 
 const SchoolCourses = () => {
   return (
-    <div className={styles.SchoolCourseWrapper}>
-      {courses.map((course) => (
-        <SchoolCourse key={course.name} course={course} />
-      ))}
+    <div>
+      <h3>Courses</h3>
+      <div className={styles.SchoolCourseWrapper}>
+        {courses.map((course) => (
+          <SchoolCourse key={course.name} course={course} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -3,9 +3,9 @@ import styles from "../page.module.css";
 import Link from "next/link";
 import { SchoolCardType } from "./SchoolWrapper";
 
-const SchoolCard = ({ card }: { card: SchoolCardType }) => {
+const SchoolCard = ({ card, min_width }: { card: SchoolCardType; min_width?: string }) => {
   return (
-    <Link href={card.slag} className={styles.schoolCard}>
+    <Link href={card.slag} className={styles.schoolCard} style={{ minWidth: min_width ? min_width : "auto" }}>
       <div className={styles.schoolCard__image}>
         <Image
           src={card.image}

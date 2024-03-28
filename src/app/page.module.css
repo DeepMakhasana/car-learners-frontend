@@ -39,6 +39,7 @@
     cursor: pointer;
 }
 
+
 /* slide design */
 .offerSlider {
     height: 250px;
@@ -92,6 +93,8 @@
     width: fit-content;
     color: var(--white-text);
 }
+
+
 
 /* sort design */
 .filterWrapper {
@@ -160,6 +163,8 @@
     border-radius: var(--radius-size);
 }
 
+
+
 /* school section design */
 .schoolWrapper {
     margin-top: 1rem;
@@ -177,7 +182,6 @@
     background-color: var(--white-background);
     padding: 1rem;
     border-radius: var(--radius-size);
-    min-width: 300px;
 }
 
 .schoolCard__info {
