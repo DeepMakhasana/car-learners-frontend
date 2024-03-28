@@ -1,0 +1,175 @@
+.selectedSchoolWrapper {
+    margin: 1.5rem 0;
+}
+
+.selectedSchoolDetail {
+    background-color: var(--white-background);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
+}
+
+.selectedSchoolDetail h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.selectedSchoolDetail>div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.selectedSchoolDetail>div p img {
+    margin-right: 0.3rem;
+}
+
+
+.availableScheduleWrapper {
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.availableScheduleOption {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: var(--white-background);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+.availableScheduleOption div {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+}
+
+
+.availableTimeSlotWrapper {
+    margin: 1.5rem 0;
+}
+
+.availableTimeSlots {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
+.availableTimeSlots div {
+    display: flex;
+    gap: 0.5rem;
+    background-color: var(--white-background);
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+
+.availableCarWrapper {
+    display: flex;
+    gap: 0.8rem;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.availableCarOption {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background-color: var(--white-background);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+.availableCarOption div {
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+}
+
+
+.promoCodeContainer {
+    margin: 1.5rem 0;
+}
+
+.promoCodeWrapper form {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    gap: 1rem;
+}
+
+.promoCodeWrapper form input {
+    outline: none;
+    padding: 0.7rem 1rem;
+    border: none;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    width: -webkit-fill-available;
+}
+
+.promoCodeWrapper form button {
+    padding: 0.7rem 1.5rem;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--white-text);
+    border-radius: var(--border-radius);
+}
+
+
+.billWrapper {
+    margin-top: 1rem;
+    background-color: var(--white-background);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.billWrapper div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.billWrapper .totalBill {
+    border-top: 1px solid var(--light-text);
+    padding-top: 1rem;
+    font-weight: 600;
+}
+
+
+.payBtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    text-align: center;
+    padding: 0.6rem 0;
+    color: var(--white-text);
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+
+@media only screen and (max-width: 360px) {
+    .availableTimeSlots div {
+        font-size: 0.82rem;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 500px) {
+    .availableTimeSlots div {
+        font-size: 0.85rem;
+    }
+}
