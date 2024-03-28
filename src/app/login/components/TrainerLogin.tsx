@@ -1,23 +1,21 @@
 import Image from "next/image";
-import styles from "../registration.module.css";
 import Link from "next/link";
+import styles from "../../registration/registration.module.css";
 
-const TrainerRegistration = () => {
+const TrainerLogin = () => {
   return (
     <section className={styles.registrationContainer}>
       <div className={styles.registration__headingSection}>
         <div className={styles.icon}>
-          <Image src={"/illustrations/trainer.svg"} alt="learner" width={60} height={60} />
+          <Image src={"/illustrations/trainer.svg"} alt="trainer" width={60} height={60} />
         </div>
-        <p>Create Trainer/School Account</p>
+        <p>Trainer’s Login</p>
       </div>
       <div className={styles.registration__from}>
         <form>
-          <input type="text" name="username" placeholder="Username" />
-          <input type="number" name="mobileNumber" placeholder="Mobile No" />
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Password" />
-          <input type="submit" value="Sign Up" />
+          <input type="submit" value="Login" />
         </form>
       </div>
       <div className={styles.registration__signUpWithOtherMethod}>
@@ -31,9 +29,9 @@ const TrainerRegistration = () => {
           <p>Continue with facebook</p>
         </div>
         <p>
-          Already have an account?{" "}
-          <Link href={"/login?accountType=learner"}>
-            <b>Login</b>
+          Don’t have an account?{" "}
+          <Link href={"/login?accountType=trainer"}>
+            <b>Register</b>
           </Link>
         </p>
       </div>
@@ -41,4 +39,4 @@ const TrainerRegistration = () => {
   );
 };
 
-export default TrainerRegistration;
+export default TrainerLogin;

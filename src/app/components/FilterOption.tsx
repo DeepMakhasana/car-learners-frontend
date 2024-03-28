@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, Suspense, useState } from "react";
 import styles from "../page.module.css";
 import { FilterType } from "./Filter";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -51,25 +51,27 @@ const FilterOption = ({ filterOption, setFilterOption, handleClose }: FilterOpti
     route.push(pathname + "?" + params.toString());
   };
   return (
-    <div className={styles.filterOptionWrapper}>
-      {selectedFilter.map((filter) =>
-        filter.isActive ? (
-          <div className={styles.filterOption} key={filter.name}>
-            <p>{filter.title}</p>
-            <input type="checkbox" name={filter.name} checked onChange={handelFilterChange} />
-          </div>
-        ) : (
-          <div className={styles.filterOption} key={filter.name}>
-            <p>{filter.title}</p>
-            <input type="checkbox" name={filter.name} onChange={handelFilterChange} />
-          </div>
-        )
-      )}
+    <Suspense fallback={<p>Loading...</p>}>
+      <div className={styles.filterOptionWrapper}>
+        {selectedFilter.map((filter) =>
+          filter.isActive ? (
+            <div className={styles.filterOption} key={filter.name}>
+              <p>{filter.title}</p>
+              <input type="checkbox" name={filter.name} checked onChange={handelFilterChange} />
+            </div>
+          ) : (
+            <div className={styles.filterOption} key={filter.name}>
+              <p>{filter.title}</p>
+              <input type="checkbox" name={filter.name} onChange={handelFilterChange} />
+            </div>
+          )
+        )}
 
-      <button className="btn" onClick={handelApply}>
-        Apply Now
-      </button>
-    </div>
+        <button className="btn" onClick={handelApply}>
+          Apply Now
+        </button>
+      </div>
+    </Suspense>
   );
 };
 

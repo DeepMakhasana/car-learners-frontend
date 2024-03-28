@@ -5,7 +5,7 @@ import styles from "../page.module.css";
 import Image from "next/image";
 import Modal from "@/components/model/Model";
 import FilterOption from "./FilterOption";
-import { useCallback, useState } from "react";
+import { Suspense, useCallback, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export interface FilterType {
@@ -84,7 +84,7 @@ const Filter = () => {
   };
 
   return (
-    <>
+    <Suspense fallback={<p>Loading...</p>}>
       <div className={styles.filterWrapper}>
         <div className={`${styles.filterBy}`} onClick={open}>
           <p>Sort By</p>
@@ -110,7 +110,7 @@ const Filter = () => {
           </Modal>
         )}
       </ModalContainer>
-    </>
+    </Suspense>
   );
 };
 

@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./registration.module.css";
 import AccountTypeSelection from "./components/AccountTypeSelection";
 import LearnerRegistration from "./components/LearnerRegistration";
 import TrainerRegistration from "./components/TrainerRegistration";

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "../registration.module.css";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 const AccountTypeSelection = () => {
   const searchQuery = useSearchParams();
@@ -14,19 +15,21 @@ const AccountTypeSelection = () => {
     route.push(pathname + "?" + params.toString());
   };
   return (
-    <div className={styles.accountTypeSelection}>
-      <h2>Select Your Account Type</h2>
-      <div className={styles.accountTypeSelectionWrapper}>
-        <div className={styles.accountTypeSelectionBox} onClick={() => handelTypeSelection("learner")}>
-          <Image src={"/illustrations/learner.svg"} alt="learner" width={180} height={180} />
-          <h3>Learner</h3>
-        </div>
-        <div className={styles.accountTypeSelectionBox} onClick={() => handelTypeSelection("trainer")}>
-          <Image src={"/illustrations/trainer.svg"} alt="trainer" width={180} height={180} />
-          <h3>Trainer</h3>
+    <Suspense fallback={<p>Loading...</p>}>
+      <div className={styles.accountTypeSelection}>
+        <h2>Select Your Account Type</h2>
+        <div className={styles.accountTypeSelectionWrapper}>
+          <div className={styles.accountTypeSelectionBox} onClick={() => handelTypeSelection("learner")}>
+            <Image src={"/illustrations/learner.svg"} alt="learner" width={180} height={180} />
+            <h3>Learner</h3>
+          </div>
+          <div className={styles.accountTypeSelectionBox} onClick={() => handelTypeSelection("trainer")}>
+            <Image src={"/illustrations/trainer.svg"} alt="trainer" width={180} height={180} />
+            <h3>Trainer</h3>
+          </div>
         </div>
       </div>
-    </div>
+    </Suspense>
   );
 };
 

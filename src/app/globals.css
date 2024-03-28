@@ -12,6 +12,8 @@
 
   --light-border-color: #cecece;
 
+  --box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.05);
+
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -52,6 +54,29 @@ section {
 
 button {
   cursor: pointer;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  background-color: var(--white-background);
+}
+
+input[type=submit] {
+  background-color: var(--primary-color);
+  color: var(--white-text);
+  font-weight: 600;
+  font-size: 1.02rem;
 }
 
 .fullScreenContainer {

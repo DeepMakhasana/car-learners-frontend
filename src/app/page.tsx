@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Filter from "./components/Filter";
 import SchoolWrapper from "./components/SchoolWrapper";
 import Search from "./components/Search";
@@ -12,7 +13,9 @@ export default function Home() {
         <main>
           <Search />
           <Slider />
-          <Filter />
+          <Suspense fallback={<p>Loading...</p>}>
+            <Filter />
+          </Suspense>
           <SchoolWrapper />
         </main>
       </section>
