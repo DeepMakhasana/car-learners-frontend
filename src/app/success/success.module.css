@@ -1,0 +1,23 @@
+.successWrapper {
+    height: 100vh;
+    width: 100vw;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.successIllustration {}
+
+.backToDashboard {
+    background-color: var(--primary-color);
+    padding: 0.8rem 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--white-text);
+    font-weight: 600;
+    border-radius: var(--border-radius);
+}

@@ -1,0 +1,167 @@
+.purchasedCourseWrapper,
+.nextScheduleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--white-background);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.purchasedCourseInfo>div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.purchasedCourseInfo h2 {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.35rem;
+}
+
+.purchasedCourseInfo>div>div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.iconWithBackground {
+    padding: 0.4rem;
+    background-color: var(--white-background);
+    border-radius: 50%;
+    box-shadow: var(--dark-box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconWithBackground img {
+    width: 14px;
+    height: 14px;
+}
+
+.selectedCar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.selectedCar span {
+    font-size: 14px;
+    width: max-content;
+}
+
+
+.nextSchedule__trainer_time {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.nextSchedule__trainer_time>div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.nextSchedule__date {
+    color: var(--light-text);
+    font-size: 14px;
+}
+
+.remainDay {
+    width: 100%;
+    position: relative;
+    top: -16px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: var(--light-text);
+}
+
+
+.curriculumWrapper {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.curriculum__topic {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--white-background);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+
+    box-shadow: var(--box-shadow);
+}
+
+.curriculum__topic p {
+    color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 1.02px;
+}
+
+.curriculum__daysWrapper {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.curriculum__daysWrapper>div {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+
+.rateWrapper {
+    background-color: var(--white-background);
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    margin-bottom: 5.5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.rateIcons {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 0;
+}
+
+.rateWrapper p {
+    color: var(--light-text);
+    font-size: 14.5px;
+    padding-bottom: 1rem;
+    letter-spacing: 1.1px;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .purchasedCourseWrapper,
+    .nextScheduleWrapper {
+        padding: 1rem 0.8rem;
+    }
+
+    .purchasedCourseInfo span {
+        font-size: 14px;
+    }
+
+    .selectedCar span {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 921px) and (max-width: 1200px) {}

@@ -16,7 +16,7 @@ const Checkout = () => {
       <AvailableCar />
       <PromoCode />
       <BillingCalculation />
-      <Link href={"/pay"} className={styles.payBtn}>
+      <Link href={"/success"} className={styles.payBtn}>
         Make Payment
       </Link>
     </section>

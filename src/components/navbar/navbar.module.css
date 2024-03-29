@@ -8,6 +8,24 @@
     align-items: center;
 }
 
+
+.backButtonTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.backButtonTopBar div {
+    padding: 0.5rem 0.8rem;
+    background-color: var(--white-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
     .topbarWrapper {
         width: 90%;
