@@ -1,4 +1,5 @@
 import Topbar from "@/components/navbar/Topbar";
+import UserBottomBar from "@/components/navbar/UserBottomBar";
 import { ReactNode } from "react";
 
 const layout = ({ children }: { children: ReactNode }) => {
@@ -6,6 +7,7 @@ const layout = ({ children }: { children: ReactNode }) => {
     <>
       <Topbar />
       {children}
+      <UserBottomBar />
     </>
   );
 };

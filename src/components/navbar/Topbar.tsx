@@ -1,12 +1,12 @@
 import Link from "next/link";
 import styles from "./navbar.module.css";
 
-const Topbar = () => {
+const Topbar = ({ type }: { type?: string }) => {
   return (
     <nav className={styles.topbarWrapper}>
       <div>
         <Link href={"/location"}>
-          <p>Location</p>
+          <p> {type == "back" ? " back Button" : "Location"} </p>
         </Link>
       </div>
       <div>

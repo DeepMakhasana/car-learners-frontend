@@ -45,7 +45,7 @@ const Curriculum = () => {
             <span>Day 6 to 10</span>
           </div>
           <div>
-            <p>Learn only Steering and Accelerator</p>
+            <p>Drive with Steering, Accelerator and Clutch</p>
             <div className={styles.curriculum__daysWrapper}>
               <div>
                 <div className={styles.iconWithBackground}>
@@ -79,7 +79,7 @@ const Curriculum = () => {
             <span>Day 11 to 15</span>
           </div>
           <div>
-            <p>Learn only Steering and Accelerator</p>
+            <p>Drive with Steering, Accelerator, Clutch and Gear</p>
             <div className={styles.curriculum__daysWrapper}>
               <div>
                 <div className={styles.iconWithBackground}>
@@ -113,7 +113,7 @@ const Curriculum = () => {
             <span>Day 11 to 15</span>
           </div>
           <div>
-            <p>Learn only Steering and Accelerator</p>
+            <p>How to reverse and deal with slope?</p>
             <div className={styles.curriculum__daysWrapper}>
               <div>
                 <div className={styles.iconWithBackground}>
