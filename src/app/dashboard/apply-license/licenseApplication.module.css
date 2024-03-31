@@ -24,6 +24,18 @@
     color: black;
 }
 
+.dateInput {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.applicationFrom label {
+    font-size: 13px;
+}
+
 @media only screen and (max-width: 768px) {
     .applicationFrom {
         width: 90%;

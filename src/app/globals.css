@@ -113,6 +113,7 @@ input[type=submit] {
 .topHading {
   font-size: 1.35rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .fullScreenContainer {
