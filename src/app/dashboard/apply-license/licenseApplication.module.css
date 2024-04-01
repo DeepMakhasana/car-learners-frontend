@@ -24,7 +24,7 @@
     color: black;
 }
 
-.dateInput {
+/* .dateInput {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -34,10 +34,80 @@
 
 .applicationFrom label {
     font-size: 13px;
+} */
+
+.applicationFrom input[type=date] {
+    width: 100%;
+}
+
+.applicationFrom input[type=date]::before {
+    content: "Date of birth";
+    color: black;
+}
+
+
+.detailPreviewWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    background-color: var(--white-background);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.UploadedDocument {
+    margin-top: 1.5rem;
+    margin-bottom: 6.5rem;
+}
+
+.previewImage {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 200px;
+}
+
+.UploadedDocument button {
+    /* width: 100%; */
+    margin-top: 1rem;
+    padding: 0.6rem 4rem;
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+
+@media only screen and (max-width: 480px) {
+    .detailPreviewWrapper span {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .UploadedDocument button {
+        width: 100%;
+    }
+
+    .previewImage {
+        height: 180px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .applicationFrom {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .detailPreviewWrapper {
+        grid-template-columns: 1fr;
     }
 }
