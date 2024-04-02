@@ -3,7 +3,7 @@ import LearnerRegistration from "./components/LearnerRegistration";
 import TrainerRegistration from "./components/TrainerRegistration";
 
 const Registration = ({ searchParams }: { searchParams: any }) => {
-  // if no query parameter is not exist
+  // if query parameter is not exist
   if (!searchParams.hasOwnProperty("accountType")) {
     return (
       <section className="fullScreenContainer">
@@ -12,8 +12,8 @@ const Registration = ({ searchParams }: { searchParams: any }) => {
     );
   }
 
-  const accountTypes = ["learner", "trainer"];
   // if query parameter is wrong
+  const accountTypes = ["learner", "trainer"];
   if (!accountTypes.includes(searchParams?.accountType)) {
     return (
       <section className="fullScreenContainer">

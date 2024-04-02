@@ -30,7 +30,7 @@ const LearnerLogin = () => {
         </div>
         <p>
           Don’t have an account?{" "}
-          <Link href={"/login?accountType=learner"}>
+          <Link href={"/registration?accountType=learner"}>
             <b>Register</b>
           </Link>
         </p>

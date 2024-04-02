@@ -120,6 +120,71 @@
 }
 
 
+
+.schoolInfoHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.schoolInfoHeaderContainer .iconWrapper {
+    width: 80px;
+    height: 80px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schoolInfoHeaderContainer h1 {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.35rem;
+}
+
+.schoolDetailFormContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 70%;
+    margin: 1.5rem auto;
+}
+
+.getSchoolLocation {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.getSchoolLocation p {
+    font-size: 13.2px;
+    color: var(--light-text);
+}
+
+.getSchoolLocation span {
+    background-color: var(--white-background);
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid var(--light-border-color);
+}
+
+#frontImage::before {
+    content: "Upload school front image";
+    color: black;
+}
+
+#otherImages::before {
+    content: "Upload school other images";
+    color: black;
+}
+
+
 @media only screen and (max-width: 768px) {
     .accountTypeSelectionWrapper {
         gap: 1rem;
@@ -137,5 +202,9 @@
 
     .registration__from form {
         min-width: 280px;
+    }
+
+    .schoolDetailFormContainer {
+        width: 90%;
     }
 }

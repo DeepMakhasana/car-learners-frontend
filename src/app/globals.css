@@ -140,6 +140,24 @@ img {
   letter-spacing: 1.2px;
 }
 
+.twoBtnContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.twoBtnContainer button {
+  padding: 0 3rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgb(46, 46, 46);
+  outline: none;
+}
+
+.twoBtnContainer input {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 /* model css */
 .backdrop {
   position: absolute;

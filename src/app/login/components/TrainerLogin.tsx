@@ -30,7 +30,7 @@ const TrainerLogin = () => {
         </div>
         <p>
           Don’t have an account?{" "}
-          <Link href={"/login?accountType=trainer"}>
+          <Link href={"/registration?accountType=trainer"}>
             <b>Register</b>
           </Link>
         </p>

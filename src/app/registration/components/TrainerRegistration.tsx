@@ -1,8 +1,19 @@
+"use client";
 import Image from "next/image";
 import styles from "../registration.module.css";
 import Link from "next/link";
+import { FormEvent } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const TrainerRegistration = () => {
+  const searchQuery = useSearchParams();
+  const pathname = usePathname();
+  const route = useRouter();
+
+  const handelSubmit = (e: FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
     <section className={styles.registrationContainer}>
       <div className={styles.registration__headingSection}>
@@ -12,7 +23,7 @@ const TrainerRegistration = () => {
         <p>Create Trainer/School Account</p>
       </div>
       <div className={styles.registration__from}>
-        <form>
+        <form onSubmit={handelSubmit} method="POST">
           <input type="text" name="username" placeholder="Username" />
           <input type="number" name="mobileNumber" placeholder="Mobile No" />
           <input type="email" name="email" placeholder="Email" />
@@ -32,7 +43,7 @@ const TrainerRegistration = () => {
         </div>
         <p>
           Already have an account?{" "}
-          <Link href={"/login?accountType=learner"}>
+          <Link href={"/login?accountType=trainer"}>
             <b>Login</b>
           </Link>
         </p>
