@@ -17,6 +17,9 @@
 
   --max-width: 1100px;
   --border-radius: 12px;
+
+  --active-filter: invert(62%) sepia(85%) saturate(2396%) hue-rotate(163deg) brightness(89%) contrast(88%);
+
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
@@ -235,6 +238,9 @@ img {
   font-size: 14px;
 }
 
+.navIconActive {
+  filter: var(--active-filter);
+}
 
 
 /* ------------------------------------------- */
