@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 const UserBottomBar = () => {
   const url = usePathname();
-  console.log(url);
   return (
     <nav className="bottomBarWrapper">
       <div className="bottomBar">
