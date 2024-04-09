@@ -16,7 +16,7 @@ const ApplyLicense = () => {
     return <ApplyLicensePreview />;
   } else {
     return (
-      <section>
+      <>
         <h1 className="topHading">License application</h1>
         <form className={styles.applicationFrom} onSubmit={handelSubmit} method="POST">
           <label htmlFor="type">license application type</label>
@@ -64,14 +64,14 @@ const ApplyLicense = () => {
           <input type="file" name="addressProof" id={styles.addressProof} title="Upload address proof" />
           <input type="submit" value="Submit" />
         </form>
-      </section>
+      </>
     );
   }
 };
 
 const ApplyLicensePreview = () => {
   return (
-    <section>
+    <>
       <h1 className="topHading">Preview License application</h1>
       <div className={styles.detailPreviewWrapper}>
         <span>
@@ -129,7 +129,7 @@ const ApplyLicensePreview = () => {
         </div>
         <button>Submit</button>
       </div>
-    </section>
+    </>
   );
 };
 

@@ -17,14 +17,11 @@ const dashboard = () => {
     redirect("/");
   } else {
     return (
-      <section>
+      <>
         <h1 style={{ marginTop: "0.5rem" }}>Dashboard</h1>
-        {userType == "owner" ? (
+        {/* {userType == "owner" ? (
           <>
-            <MonthlyData />
-            <LearnerDetails />
-            <CurrentTrainerActivity />
-            <LicenseApplication />
+             here put owner components 
           </>
         ) : (
           <>
@@ -33,8 +30,12 @@ const dashboard = () => {
             <Curriculum />
             <UserRating />
           </>
-        )}
-      </section>
+        )} */}
+        <MonthlyData />
+        <LearnerDetails />
+        <CurrentTrainerActivity />
+        <LicenseApplication />
+      </>
     );
   }
 };

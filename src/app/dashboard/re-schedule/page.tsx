@@ -4,13 +4,13 @@ import CancelSlot from "./components/CancelSlot";
 
 const ReSchedule = () => {
   return (
-    <section>
+    <>
       <h1 className="topHading">Next Schedule</h1>
       <Schedule />
       <h3>Re-Schedule</h3>
       <TimeSlots />
       <CancelSlot />
-    </section>
+    </>
   );
 };
 

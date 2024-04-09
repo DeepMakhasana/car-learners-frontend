@@ -11,7 +11,7 @@ const layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
       <Topbar />
-      {children}
+      <section>{children}</section>
       {userType == "user" ? <UserBottomBar /> : <OwnerBottomBar />}
     </>
   );
