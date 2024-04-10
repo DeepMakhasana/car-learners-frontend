@@ -27,7 +27,7 @@ const OwnerBottomBar = () => {
               alt="curriculum"
               width={18}
               height={18}
-              className={url == "/dashboard/curriculum" ? "navIconActive" : ""}
+              className={url.includes("/dashboard/curriculum") ? "navIconActive" : ""}
             />
             <span>Curriculum</span>
           </div>

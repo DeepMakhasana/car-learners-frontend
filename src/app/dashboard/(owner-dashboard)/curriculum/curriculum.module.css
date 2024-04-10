@@ -53,31 +53,33 @@
     margin-bottom: 6rem;
 }
 
-.createCurriculumContainer form>div:first-child,
-.createCurriculumContainer form>div:nth-child(3),
-.createCurriculumContainer form>div:nth-child(5) {
+.createCurriculumContainer form .twoColumnInput {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.createCurriculumContainer form>div:nth-child(2),
-.createCurriculumContainer form>div:nth-child(4) {
+.createCurriculumContainer form .addOption {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 1.5rem 0;
 }
 
-.createCurriculumContainer form>div:nth-child(2)>div,
-.createCurriculumContainer form>div:nth-child(4)>div {
+.createCurriculumContainer form .addOption p {
+    font-weight: 500;
+}
+
+.createCurriculumContainer form .addOption div {
     background-color: var(--white-background);
     border-radius: 50%;
-    box-shadow: var(--box-shadow);
-    padding: 0.5rem;
+    box-shadow: var(--dark-box-shadow);
+    padding: 0.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .createCurriculumContainer form input[type=submit] {
@@ -90,9 +92,7 @@
 
 @media only screen and (max-width: 480px) {
 
-    .createCurriculumContainer form>div:first-child,
-    .createCurriculumContainer form>div:nth-child(3),
-    .createCurriculumContainer form>div:nth-child(5) {
+    .createCurriculumContainer form .twoColumnInput {
         grid-template-columns: 1fr;
     }
 }
