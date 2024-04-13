@@ -1,0 +1,42 @@
+.SchoolDetailUpdateFromContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+.SchoolDetailUpdateFromContainer h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.getSchoolLocation {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.getSchoolLocation p {
+    font-size: 13.2px;
+    color: var(--light-text);
+}
+
+.getSchoolLocation span {
+    background-color: var(--white-background);
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: fit-content;
+    border: 1px solid var(--light-border-color);
+}
+
+
+#frontImage::before {
+    content: "Upload school front image";
+    color: black;
+}
+
+#otherImages::before {
+    content: "Upload school other images";
+    color: black;
+}

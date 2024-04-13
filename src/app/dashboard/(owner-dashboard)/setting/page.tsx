@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./setting.module.css";
+import Link from "next/link";
 
 interface SettingOptionType {
   icon: string;
   title: string;
   description: string;
+  href: string;
 }
 
 const setting = () => {
@@ -13,26 +15,31 @@ const setting = () => {
       icon: "/icons/profile.svg",
       title: "Profile",
       description: "Name, email, phone, change password",
+      href: "/dashboard/setting/profile",
     },
     {
       icon: "/icons/school-blue.svg",
       title: "Driving school",
       description: "School name, email, contact, address",
+      href: "/dashboard/setting/school-detail",
     },
     {
       icon: "/icons/schedule-blue.svg",
       title: "Time slot",
       description: "Set and update learning time slot",
+      href: "/dashboard/setting/time-slot",
     },
     {
       icon: "/icons/trainer.svg",
       title: "Trainer",
       description: "Create and update trainer details",
+      href: "/dashboard/setting/trainer",
     },
     {
       icon: "/icons/car-blue.svg",
       title: "vehicle",
       description: "Add and allot vehicle to trainer",
+      href: "/dashboard/setting/vehicle",
     },
   ];
 
@@ -53,7 +60,7 @@ const setting = () => {
 
 const SettingOption = ({ settingOption }: { settingOption: SettingOptionType }) => {
   return (
-    <div className={styles.settingOption}>
+    <Link href={settingOption.href} className={styles.settingOption}>
       <div>
         <Image src={settingOption.icon} alt="profile" width={20} height={20} />
       </div>
@@ -61,7 +68,7 @@ const SettingOption = ({ settingOption }: { settingOption: SettingOptionType }) 
         <p>{settingOption.title}</p>
         <span>{settingOption.description}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 

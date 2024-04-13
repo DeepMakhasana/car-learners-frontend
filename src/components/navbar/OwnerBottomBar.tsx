@@ -63,7 +63,7 @@ const OwnerBottomBar = () => {
               alt="setting"
               width={18}
               height={18}
-              className={url == "/dashboard/setting" ? "navIconActive" : ""}
+              className={url.includes("/dashboard/setting") ? "navIconActive" : ""}
             />
             <span>Settings</span>
           </div>

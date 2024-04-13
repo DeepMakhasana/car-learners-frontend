@@ -10,12 +10,13 @@
 
 .settingOption {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     align-items: center;
     background-color: var(--white-background);
     box-shadow: var(--box-shadow);
     padding: 1rem;
     border-radius: var(--border-radius);
+    cursor: pointer;
 }
 
 .settingOption>div:first-child {

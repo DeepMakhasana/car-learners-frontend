@@ -3,6 +3,7 @@ import UserBottomBar from "@/components/navbar/UserBottomBar";
 import { ReactNode } from "react";
 import { cookies } from "next/headers";
 import OwnerBottomBar from "@/components/navbar/OwnerBottomBar";
+import BackButtonTopBar from "@/components/navbar/BackButtonTopBar";
 
 const layout = ({ children }: { children: ReactNode }) => {
   const cookieStore = cookies();
@@ -10,7 +11,7 @@ const layout = ({ children }: { children: ReactNode }) => {
 
   return (
     <>
-      <Topbar />
+      <BackButtonTopBar />
       <section>{children}</section>
       {userType == "user" ? <UserBottomBar /> : <OwnerBottomBar />}
     </>

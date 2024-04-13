@@ -1,0 +1,27 @@
+.timeSlotContainer {
+    display: flex;
+    gap: 1.2rem;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.timeSlotListContainer {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.timeSlotList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-background);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.timeSlotList div {
+    display: flex;
+    gap: 2rem;
+}
