@@ -1,0 +1,177 @@
+.trainerTitleContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--white-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.trainerTitleContainer p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.trainerTitleContainer span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+.currentScheduleContainer h2,
+.currentExpenseContainer h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.scheduleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem;
+    background-color: var(--white-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.scheduleWrapper>div:first-child {
+    border-left: 4px solid var(--primary-color);
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.scheduleWrapper>div:first-child p {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.scheduleWrapper>div:first-child span {
+    font-size: 0.85rem;
+    color: var(--light-text);
+}
+
+.scheduleWrapper>div:last-child {
+    display: flex;
+    gap: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.scheduleWrapper>div:last-child div {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--dark-box-shadow);
+    border-radius: 50%;
+}
+
+
+.currentExpenseContainer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.currentExpenseWrapper {
+    padding: 1.4rem;
+    background-color: var(--white-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.currentExpenseWrapper p {
+    margin-bottom: 0.3rem;
+}
+
+.currentExpenseWrapper span {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+
+.scheduleContainer {
+    margin-bottom: 6rem;
+}
+
+.scheduleContainer h1 {
+    text-align: center;
+}
+
+.scheduleDateWrapper {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.scheduleDateWrapper p {
+    font-size: 1.6rem;
+}
+
+.scheduleDateWrapper p span {
+    color: var(--light-text);
+}
+
+.scheduleDatesWrapper {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scheduleDatesWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scheduleDatesWrapper .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 1.25rem;
+    background-color: var(--white-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: 0.2s ease-in;
+}
+
+.scheduleDatesWrapper .date:hover {
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    font-weight: 600;
+}
+
+
+.schedulerWrapper {
+    display: grid;
+    gap: 2rem;
+}
+
+.schedulerForOneDay {
+    display: grid;
+    gap: 1rem;
+}
+
+.schedulerForOneDay p {
+    font-weight: 500;
+}
+
+.schedulerForOneDay p span {
+    font-weight: 400;
+    color: var(--light-text);
+}
