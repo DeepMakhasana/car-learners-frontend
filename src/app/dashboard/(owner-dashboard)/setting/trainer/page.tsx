@@ -1,5 +1,5 @@
+import CreatedList from "../components/CreatedList";
 import SubPageWrapper from "../components/SubPageWrapper";
-import { CreatedList } from "../time-slot/page";
 import styles from "./trainer.module.css";
 
 const Trainer = () => {
