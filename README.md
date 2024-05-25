@@ -8,6 +8,8 @@ Full solution for driving school
 
 🛢[Database Design](https://www.figma.com/file/1YShedVKEaEKryEHl9LGBJ/Database?type=design&node-id=0%3A1&mode=design&t=dGWibp8RTXRGfTXr-1)
 
+📹 [Youtube Video](https://youtu.be/5cBGw_m_I2Y)
+
 ## How to Contribute
 
 Contributing to car-learners-backend is straightforward. Here's how you can get started:
